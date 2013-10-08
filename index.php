@@ -1,13 +1,18 @@
 <?php
 /**
- * This can be stored in a seperate file called config.inc and included
- * via include('config.inc');
+ * Database connection details
+ * This can be stored in a seperate file called config.php and included
+ * via include('config.php');
+ *
+ * Fake example details!
+ *
+ * $db_host = 'localhost';
+ * $db_database = 'bigcompanyinc';
+ * $db_user = 'corporate_stooge';
+ * $db_password = 'password1';
  */
- //Enter your details - these are fake!
-$db_host = 'localhost';
-$db_database = 'bigcompanyinc';
-$db_user = 'corporate_stooge';
-$db_password = 'password1';
+
+include('../../inc/db.php');
 
 $db = mysql_connect($db_host, $db_user, $db_password);
 mysql_select_db($db_database);
